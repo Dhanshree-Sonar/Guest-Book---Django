@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,12 +14,12 @@
     <title>Guest Book</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'guestbook_app/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="bootstrap-theme.min.css" rel="stylesheet">
+    <link href="{% static 'guestbook_app/bootstrap-theme.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="theme.css" rel="stylesheet">
+    <link href="{% static 'guestbook_app/theme.css' %}" rel="stylesheet">
 
   </head>
 
@@ -28,7 +29,7 @@
 
       <div class="jumbotron">
         <h1>Guest Book</h1>
-        <a type="button" class="btn btn-link" href="sign.html">Sign the Guest Book</a>
+        <a type="button" class="btn btn-link" href="{% url 'sign' %}">Sign the Guest Book</a>
       </div>
 
       <div class="page-header">
